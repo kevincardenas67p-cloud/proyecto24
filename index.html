@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Historias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Mis Historias</h1>
+        <p>Comparte tus momentos</p>
+    </header>
+
+    <main>
+        <div class="historias" id="historias">
+
+            <div class="historia agregar" onclick="document.getElementById('imagen').click()">
+                <div class="circulo">
+                    <span>+</span>
+                </div>
+                <p>Agregar</p>
+            </div>
+
+        </div>
+
+        <input type="file" id="imagen" accept="image/*" hidden>
+
+        <p class="mensaje">
+            Las historias desaparecen automáticamente después de 24 horas.
+        </p>
+    </main>
+
+    <div class="visor" id="visor">
+        <div class="contenido-visor">
+            <button class="cerrar" onclick="cerrarHistoria()">×</button>
+
+            <img id="imagenGrande" src="" alt="Historia">
+
+            <div class="controles">
+                <button onclick="anterior()">❮</button>
+                <button onclick="siguiente()">❯</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
